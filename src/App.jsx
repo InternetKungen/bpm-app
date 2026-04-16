@@ -4,7 +4,7 @@ import "./App.css";
 const BPMCalculator = () => {
   const [bpm, setBpm] = useState(0);
   const [clickTimes, setClickTimes] = useState([]);
-  const [display, setDisplay] = useState("Klicka för att börja");
+  const [display, setDisplay] = useState("BPM-Meter");
   const [flash, setFlash] = useState(false);
   const [blinking, setBlinking] = useState(false);
   const [shine, setShine] = useState(false);
