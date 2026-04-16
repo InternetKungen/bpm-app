@@ -19,7 +19,7 @@ const BPMCalculator = () => {
       const recent = updated.slice(-8);
 
       if (recent.length < 2) {
-        setDisplay("Klicka igen...");
+        setDisplay("Tap it again...");
         return updated;
       }
 
@@ -49,7 +49,7 @@ const BPMCalculator = () => {
   const handleReset = useCallback(() => {
     setBpm(0);
     setClickTimes([]);
-    setDisplay("Klicka för att börja");
+    setDisplay("Tap it!");
     setBlinking(false);
     setShine(false);
   }, []);
@@ -62,7 +62,7 @@ const BPMCalculator = () => {
       ></div>
       <div className={`app-container ${shine ? 'shine' : ''}`}
       style={{ '--shine-duration': shine ? `${60 / bpm}s` : '0.2s' }}>
-        <h1 className="app-title">BPM-meter</h1>
+        <div className="app-bpm-display">{display}</div>
 
         <button
           className="app-button"
@@ -71,13 +71,13 @@ const BPMCalculator = () => {
           Tap!
         </button>
 
-        <div className="app-bpm-display">{display}</div>
+        {/* <div className="app-bpm-display">{display}</div> */}
 
-        {clickTimes.length > 1 && (
+      
           <button className="app-reset-button" onClick={handleReset}>
             Reset
           </button>
-        )}
+       
       </div>
     </div>
   );

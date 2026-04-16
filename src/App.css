@@ -35,7 +35,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 80px;
+  position: relative;
+  width: 350px;
+  min-width: 350px;
+  height: 400px;
+  min-height: 400px;
+  padding: 20px 40px;
   background: linear-gradient(180deg, #C4A77D, #70877F);
   border-radius: 24px;
   border: 2px solid #EF946C;
@@ -83,11 +88,13 @@
 }
 
 .app-bpm-display {
-  margin-top: 30px;
-  font-size: 2.5rem;
+  /* position: absolute; */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 2rem;
   font-weight: 800;
-  color: #00e5ff;
-  text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+  color: #EF946C;
+  text-shadow: -1px -1px 0 #2F2963, 1px -1px 0 #2F2963, -1px 1px 0 #2F2963, 1px 1px 0 #2F2963;
   min-height: 60px;
   display: flex;
   align-items: center;
@@ -97,12 +104,21 @@
   margin-top: 20px;
   padding: 10px 30px;
   font-size: 0.9rem;
-  color: #aaa;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #2F2963, 1px -1px 0 #2F2963, -1px 1px 0 #2F2963, 1px 1px 0 #2F2963;
+  color: #C4A77D;
+  background: linear-gradient(135deg, #EF946C, #C4A77D);
+  border: 2px solid #2F2963;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.app-reset-button:active {
+  transform: scale(0.99);
+  background: linear-gradient(135deg, #454372, #5B6579);
+  box-shadow: 0 0px 10px #5B6579;
+  border: 2px solid #2F2963;
 }
 
 @keyframes flash {
@@ -120,17 +136,19 @@
   0% { box-shadow: 0 0 20px #EF946C; 
        outline: 0px solid #EF946C; }
   50% { box-shadow: 0 0 200px #EF946C; 
-       outline: 20px double #C4A77D; }
+       outline: 20px double #d3c4b0; }
   100% { box-shadow: 0 0 20px #EF946C; 
        outline: 0px solid #EF946C; }
 }
 
 @keyframes rainbow-outline-colors {
-  0% { outline-color: #EF946C; }
-  20% { outline-color: #C4A77D; }
-  40% { outline-color: #70877F; }
+  0% { outline-color: #ef936c77; }
+  20% { outline-color: #c4a77da4; }
+  40% { outline-color: #70877fab; }
+  45% { outline-color: #c4a77dda; }
   50% { outline-color: #EF946C; }
-  60% { outline-color: #454372; }
-  80% { outline-color: #2F2963; }
-  100% { outline-color: #EF946C; }
+  55% { outline-color: #C4A77Dda; }
+  60% { outline-color: #70877Fab; }
+  80% { outline-color: #C4A77Da4; }
+  100% { outline-color: #ef936c77; }
 }
